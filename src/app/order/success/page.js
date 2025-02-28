@@ -19,7 +19,7 @@ export default async function SuccessPage({ searchParams }) {
     <div className="container mx-auto px-4 py-16 text-center">
       <h1 className="text-3xl font-bold text-green-600 mb-4">Payment Successful</h1>
       <p className="mb-8">Your order has been successfully placed.</p>
-      <p className="mb-8">Order ID: {session.id}</p>
+      {/* <p className="mb-8">Order ID: {session_id}</p> */}
     </div>
   );
 }
