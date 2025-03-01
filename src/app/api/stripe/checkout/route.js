@@ -11,6 +11,7 @@ export async function POST(request) {
       const { priceId } = await request.json();
     
       // 2) Create a checkout session
+      // docs: https://docs.stripe.com/api/checkout/sessions/create
       const session = await stripe.checkout.sessions.create({
         line_items: [
           {
@@ -19,7 +20,6 @@ export async function POST(request) {
           }
         ],
         mode: 'payment', // one time payment
-        // payment_method_types: ['card'], // optional
         success_url: `${origin}/order/success?session_id={CHECKOUT_SESSION_ID}`,
         // cancel_url: `${origin}/order/cancel` // optional
       });

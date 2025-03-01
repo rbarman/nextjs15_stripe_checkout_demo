@@ -1,3 +1,16 @@
+Next JS 15 template project with Stripe Checkout Forms for internal micro saas
+
+- `npm install stripe @stripe/stripe-js`
+- Stripe Checkout Forms: https://stripe.com/payments/checkout
+- Stripe Checkout Forms docs: https://docs.stripe.com/checkout/quickstart
+- test cards: https://docs.stripe.com/testing#cards
+
+![demo](./demo.gif)
+
+
+<details>
+<summary>Next JS Boilerplate readme content:</summary>
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -34,3 +47,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+</details>

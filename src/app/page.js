@@ -11,6 +11,7 @@ export default function Home() {
         },
         body: JSON.stringify({
           // Stripe Product Price ID
+          // find or create a product and price in Stripe Dashboard (https://dashboard.stripe.com/)
           priceId: 'price_1QwwYV046dhYqJ0wYIorNn3x',
         }),
       });

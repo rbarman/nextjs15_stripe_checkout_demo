@@ -4,9 +4,11 @@ export default async function SuccessPage({ searchParams }) {
   
   const params = await searchParams; 
   const { session_id } = params;
+  // docs: https://docs.stripe.com/api/checkout/sessions/retrieve
   const session = await stripe.checkout.sessions.retrieve(session_id);
 
   // Verify payment status
+  // docs: https://docs.stripe.com/api/checkout/sessions/object
   if (session.payment_status !== 'paid') {
     return (
       <div className="container mx-auto px-4 py-16 text-center">
