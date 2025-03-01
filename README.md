@@ -1,14 +1,34 @@
 Next JS 15 template project with Stripe Checkout Forms for internal micro saas
 
-- `npm install stripe @stripe/stripe-js`
-- Stripe Checkout Forms: https://stripe.com/payments/checkout
-- Stripe Checkout Forms docs: https://docs.stripe.com/checkout/quickstart
-- test cards: https://docs.stripe.com/testing#cards
-
 ![demo](./demo.gif)
 
-TODO:
-- Stripe Webhooks
+## Setup
+
+Install dependencies:
+
+- `npm install stripe @stripe/stripe-js`
+- install [stripe cli](https://docs.stripe.com/cli) to run Stripe Webhooks locally
+
+Stripe Store Setup:
+- create a new product in Stripe
+- note the price product id
+- set the 
+
+Local Webhook Setup:
+
+- `stripe login`
+- `stripe listen --forward-to http://localhost:3000/api/stripe/webhook`
+- use `--events` for specific events:
+    - `stripe listen --forward-to http://localhost:3000/api/stripe/webhook --events checkout.session.completed`
+- update `STRIPE_WEBHOOK_SECRET` in `.env.local`
+
+## Resources
+- Stripe Checkout Forms: https://stripe.com/payments/checkout
+- Stripe Checkout Forms docs: https://docs.stripe.com/checkout/quickstart
+- Stripe Webhooks: https://docs.stripe.com/webhooks
+- Stripe Test Cards: https://docs.stripe.com/testing#cards
+
+----
 
 <details>
 <summary>Next JS Boilerplate readme content:</summary>
