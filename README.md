@@ -7,6 +7,8 @@ Next JS 15 template project with Stripe Checkout Forms for internal micro saas
 
 ![demo](./demo.gif)
 
+TODO:
+- Stripe Webhooks
 
 <details>
 <summary>Next JS Boilerplate readme content:</summary>
