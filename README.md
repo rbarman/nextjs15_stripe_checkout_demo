@@ -1,4 +1,4 @@
-Next JS 15 template project with Stripe Checkout Forms for internal micro saas
+Next JS 15 demo with Stripe Checkout Page for internal micro saas
 
 ![demo](./demo.gif)
 
