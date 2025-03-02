@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "stripe-listen": "stripe listen --forward-to http://localhost:3000/api/stripe/webhook"
   },
   "dependencies": {
     "@stripe/stripe-js": "^5.7.0",

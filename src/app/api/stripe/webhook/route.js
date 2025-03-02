@@ -13,13 +13,10 @@ export async function POST(request) {
             throw new Error('STRIPE_WEBHOOK_SECRET is not defined');
         }
 
-        // Verify the webhook signature
-        const event = stripe.webhooks.constructEvent(
-            body,
-            signature,
-            process.env.STRIPE_WEBHOOK_SECRET
-        );
-
+        const event = stripe.webhooks.constructEvent(body, signature, process.env.STRIPE_WEBHOOK_SECRET);
+        // All types of events: https://docs.stripe.com/api/events
+        // The Checkout Fullfillment docs recommend to listen for checkout.session.completed and checkout.session.async_payment_succeeded for a successful payment
+        // (https://docs.stripe.com/checkout/fulfillment?payment-ui=stripe-hosted#create-payment-event-handler)
         if (event.type === 'checkout.session.completed' || event.type === 'checkout.session.async_payment_succeeded') {
             console.log('Payment successful:', event);
         }
